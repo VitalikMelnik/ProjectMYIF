@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+    <title>About us</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//codepen.io/assets/reset/normalize.css">
+    <link rel="stylesheet" href="css/about.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js" type="text/javascript"></script>
+    <script src="js/about.js"  type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+<section class="strips">
+    <article class="strips__strip">
+        <div class="strip__content">
+
+            <h1 class="strip__title" data-name="Lorem">History</h1>
+            <div class="strip__inner-text">
+                <h2>History</h2>
+
+                <p> The city was founded in 1662 Cracow castellan, then a full crown hetman Andrzej Potocki (from a known type of Polish magnates), and was named Stanislau - in honor of his father, the great crown hetman Stanislaw "Revere" Potocki [3].
+                    The city was founded as a fortress to protect against the raids of Crimean Tatars and Zaporozhye Cossacks, and a strong point of Polish magnates Potocki in Galicia and received Magdeburg Law. In 1676-1677 gg. He withstood a siege by the Turkish troops.
+                    Stanislawow began with the Market Square and the Town Hall, which in a modified state is intact to this day. In its further development are reflected urban ideas of the Baroque "ideal city", embodied in the planning of the central part of the city, its streets, temples. For the original architecture of the city is sometimes called "small Lviv".
+                </p>
+                <p>
+                    <a class="title-btn" href="https://en.wikipedia.org/wiki/Ivano-Frankivsk" target="_blank">Read More</a>
+                </p>
+            </div>
+
+        </div>
+    </article>
+    <article class="strips__strip">
+        <div class="strip__content">
+            <h1 class="strip__title" data-name="Ipsum">Words</h1>
+            <div class="strip__inner-text">
+                <h2>Ettrics</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur, quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta omnis quibusdam facilis, illo voluptates odit!</p>
+                <p>
+                    <a href="https://twitter.com/ettrics" target="_blank"><i class="fa fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+    </article>
+    <article class="strips__strip">
+        <div class="strip__content">
+            <h1 class="strip__title" data-name="Dolor">Photo</h1>
+            <div class="strip__inner-text">
+                <div id=carousel>
+                    <figure id=spinner>
+                        <img src=img/about/_WP66mdI1Ts.jpg alt="Photo">
+                        <img src=img/about/dEogcxkwlAs.jpg alt="Photo">
+                        <img src=img/about/jfV9pEwJQG4.jpg alt="Photo">
+                        <img src=img/about/OEd-oxXLmaU.jpg alt="Photo">
+                        <img src=img/about/p0UVGUl4MPY.jpg alt="Photo">
+                        <img src=img/about/QEaMEvfTWuY.jpg alt="Photo">
+                        <img src=img/about/WJMg6bZJ2nA.jpg alt="Photo">
+                        <img src=img/about/ydfKOuibRe4.jpg alt="Photo">
+
+                    </figure>
+                </div>
+                <span style=float:left class=ss-icon onclick="galleryspin('-')">&lt;</span>
+                <span style=float:right class=ss-icon onclick="galleryspin('')">&gt;</span>
+            </div>
+        </div>
+    </article>
+    <article class="strips__strip">
+        <div class="strip__content">
+            <h1 class="strip__title" data-name="Sit">Video</h1>
+            <div class="strip__inner-text">
+                <iframe width="854" height="480" src="https://www.youtube.com/embed/piG3ITJzz7g" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </article>
+    <article class="strips__strip">
+        <div class="strip__content">
+            <h1 class="strip__title" data-name="Amet">Here</h1>
+            <div class="strip__inner-text">
+                <h2>Ettrics</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sapiente deserunt consectetur, quod reiciendis corrupti quo ea aliquid! Repellendus numquam quo, voluptate. Suscipit soluta omnis quibusdam facilis, illo voluptates odit!</p>
+                <p>
+                    <a href="https://twitter.com/ettrics" target="_blank"><i class="fa fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+    </article>
+    <i class="fa fa-close strip__close"></i>
+</section>
+
+<div id="menu">
+<div class="button_container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+</div>
+
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul>
+            <li ><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script>
+    var Expand = (function() {
+        var tile = $('.strips__strip');
+        var tileLink = $('.strips__strip > .strip__content');
+        var tileText = tileLink.find('.strip__inner-text');
+        var stripClose = $('.strip__close');
+
+        var expanded  = false;
+
+        var open = function() {
+
+            var tile = $(this).parent();
+
+            if (!expanded) {
+                tile.addClass('strips__strip--expanded');
+                // add delay to inner text
+                tileText.css('transition', 'all .6s 1s cubic-bezier(0.23, 1, 0.32, 1)');
+                stripClose.addClass('strip__close--show');
+                stripClose.css('transition', 'all .6s 1s cubic-bezier(0.23, 1, 0.32, 1)');
+                expanded = true;
+            }
+        };
+
+        var close = function() {
+            if (expanded) {
+                tile.removeClass('strips__strip--expanded');
+                // remove delay from inner text
+                tileText.css('transition', 'all 0.15s 0 cubic-bezier(0.23, 1, 0.32, 1)');
+                stripClose.removeClass('strip__close--show');
+                stripClose.css('transition', 'all 0.2s 0s cubic-bezier(0.23, 1, 0.32, 1)')
+                expanded = false;
+            }
+        }
+
+        var bindActions = function() {
+            tileLink.on('click', open);
+            stripClose.on('click', close);
+        };
+
+        var init = function() {
+            bindActions();
+        };
+
+        return {
+            init: init
+        };
+
+    }());
+
+    Expand.init();
+    //@ sourceURL=pen.js
+</script>
+
+<script>
+    $('#toggle').click(function() {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+    });
+</script>
+
+
+</body>
+</html>
+ 
